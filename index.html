@@ -2,46 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
   <title>Frontend Mentor | Results summary component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Results summary component solution" />
+  <meta name="description" content="Results summary component challenge on Frontend Mentor" />
+  <meta name="author" content="Darius" />
+  <!--<link rel="stylesheet" href="main.css" />-->
+  <!--<script defer src="main.js"></script>-->
 </head>
 <body>
-
-  Your Result
-  76
-  of 100
-
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
-
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <div class="grid-container">
+        <!--1st component-->
+        <main class="main">
+          <h1 class="sr-only">Results summary</h1>
+          <p class="main__title">Your result</p>
+          <div class="main__result"><span class="main__result-total">76</span><br/><span class="main__sample">of 100</span></div>
+          <p class="main__result-description-title">Great</p>
+          <p class="main__result-description">You scored higher than 65% of the people who have taken these tests.</p>
+        </main>
+        <!--2nd component-->
+        <section class="evaluation">
+            <h2 class="evaluation__title">Summary</h2>
+            <div class="evaluation__reaction">
+                <p class="evaluation__reaction-title"><img class="img__reaction" src='assets/images/icon-reaction.svg' alt="Reaction" /><span class="reaction">Reaction</span></p>
+                <p class="evaluation__reaction-value"></p>
+            </div>
+            <div class="evaluation__memory">
+                <p class="evaluation__memory-title"><img class="img__memory" src='assets/images/icon-memory.svg' alt="Memory" /><span class="memory">Memory</span></p>
+                <p class="evaluation__memory-value"></p>
+            </div>
+            <div class="evaluation__verbal">
+                <p class="evaluation__verbal-title"><img class="img__verbal" src='assets/images/icon-verbal.svg' alt="Verbal" /><span class="verbal">Verbal</span></p>
+                <p class="evaluation__verbal-value"></p>
+            </div>
+            <div class="evaluation__visual">
+                <p class="evaluation__visual-title"><img class="img__visual" src='assets/images/icon-visual.svg' alt="Visual" /><span class="visual">Visual</span></p>
+                <p class="evaluation__visual-value"></p>
+            </div>
+            <div class="btn__container">
+                <button class="btn">Continue</button>
+            </div>
+        </section>
+        <!--3th component-->
+        <footer class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">@Darionas</a>.
+        </footer>
+    </div>
 </body>
 </html>
