@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <title>Frontend Mentor | Results summary component</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Results summary component solution" />
+    <meta name="description" content="Results summary component challenge on Frontend Mentor" />
+    <meta name="author" content="Darius" />
+    <link rel="stylesheet" href="main.css" />
+    <!--<script defer src="main.js"></script>-->
+</head>
+
+<body>
+   <div class="res"></div>
+
+   <pre>
+   <script>
+       getJSON('data.json');
+
+       async function getJSON(file) {
+        let myObject = await fetch(file);
+        let myData = await myObject.text();
+        let get = JSON.parse(myData);
+        document.querySelector('.res').innerHTML = get[0].category;
+        //console.log(Object.values(get)[0].category);
+        let i;
+        for(i=0; i < get.length; i++) {
+            let res = document.querySelector('.res');
+            let result = document.createElement('div');
+            res.appendChild(result);
+            result.innerHTML = 
+            `<div class="evaluation__reaction">
+                <img src="${get[i].icon}" alt="${get[i].category}" />
+                <div class="evaluation__reaction-title"><span class="reaction">${get[i].category}</span></div>
+                <div class="evaluation__reaction-value"><span class="score">${get[i].score}</span><span class="from"> / 100</span></div>
+            </div>`;
+            let exec = document.getElementsByClassName('reaction');
+                        
+            let r = '';
+            for(let a=0; a < exec.length; a++) {
+                r = exec[a];
+            }
+             console.log(r.innerHTML);
+            if(r.innerHTML == 'Memory') {
+                //console.log(get[i].category);
+                r.style.backgroundColor = 'yellow';
+                
+            }
+       }
+    }
+        
+   </script>
+   </pre>
+</body>
+
+</html>
