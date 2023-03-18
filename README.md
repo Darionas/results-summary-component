@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Result_summary_component](./assets/images/result-summary-component.png)
+![Result_summary_component](./assets/images/result_summary_component.png)
 
 
 ### Links
