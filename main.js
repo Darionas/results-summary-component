@@ -16,7 +16,7 @@ async function getJSON(file) {
             evaluation.appendChild(results);
             results.innerHTML =
                 `<div class="evaluation-container">
-                         <img class="evaluation-container__img" src="${item.icon}" alt=" " />
+                         <img class="evaluation-container__img" src="${item.icon}" alt="${item.category}" />
                          <h3 class="evaluation-container__title">${item.category}</h3>
                          <div class="evaluation-container__value"><span class="score">${item.score}</span><span class="from"> / 100</span></div>
                 </div>`;
