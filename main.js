@@ -12,7 +12,7 @@ getJSON('data.json');
         try {
             let myData = await myObject.text();
             let get = JSON.parse(myData);
-      
+                
             for(let i=0; i < get.length; i++) {
                 let results = document.createElement('div');
                 evaluation.appendChild(results);
