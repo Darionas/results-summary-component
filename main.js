@@ -7,22 +7,6 @@ let title, categories;
 
 getJSON('data.json');
 
-<<<<<<< HEAD
-    async function getJSON(file) {
-         let myObject = await fetch(file);
-        try {
-            let myData = await myObject.text();
-            let get = JSON.parse(myData);
-                
-            for(let i=0; i < get.length; i++) {
-                let results = document.createElement('div');
-                evaluation.appendChild(results);
-                results.innerHTML = 
-                    `<div class="evaluation-container">
-                         <img class="evaluation-container__img" src="${get[i].icon}" alt="${get[i].category}" />
-                         <div class="evaluation-container__title">${get[i].category}</div>
-                         <div class="evaluation-container__value"><span class="score">${get[i].score}</span><span class="from"> / 100</span></div>
-=======
 async function getJSON(file) {
     let myObject = await fetch(file);
     try {
@@ -37,8 +21,7 @@ async function getJSON(file) {
                          <img class="evaluation-container__img" src="${item.icon}" alt="${item.category}" />
                          <div class="evaluation-container__title">${item.category}</div>
                          <div class="evaluation-container__value"><span class="score">${item.score}</span><span class="from"> / 100</span></div>
->>>>>>> 8bc21037be2cbe162aa0bbb9a0c44becd366d153
-                    </div>`;
+                </div>`;
             title = document.getElementsByClassName('evaluation-container__title');
             categories = '';
             for (let a = 0; a < title.length; a++) {
