@@ -8,26 +8,26 @@
   <meta name="keywords" content="Results summary component solution" />
   <meta name="description" content="Results summary component challenge on Frontend Mentor" />
   <meta name="author" content="Darius" />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500..800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="main.css" />
   <script defer src="main.js"></script>
 </head>
 <body>
     <div class="grid-container">
         <!--1st component-->
-        <div class="content">
-            <main class="main">
-                <h1 class="sr-only">Results summary</h1>
-                <p class="main__title">Your result</p>
-                <div class="main__result"><span class="main__result-total">76</span><br/><span class="main__sample">of 100</span></div>
-                <p class="main__result-description-title">Great</p>
-                <p class="main__result-description">You scored higher than 65% of the people who have taken these tests.</p>
-            </main>
+        <main class="main" role="main">
+            <section class="board">
+                <h1 class="board__title">Your result</h1>
+                <div class="board__result"><span class="board__result-total">76</span><br/><span class="board__sample">of 100</span></div>
+                <p class="board__result-description-title">Great</p>
+                <p class="board__result-description">You scored higher than 65% of the people who have taken these tests.</p>
+            </section>
             <section class="evaluation">
                 <h2 class="evaluation__title">Summary</h2>
             </section> 
-        </div>       
+        </main>       
         <!--2nd component-->
-        <footer class="attribution">
+        <footer class="attribution" role="contentinfo">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
             Coded by <a href="#">@Darionas</a>.
         </footer>

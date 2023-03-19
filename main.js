@@ -1,29 +1,27 @@
 'Use strict';
 /*jshint esversion: 8*/
 
-let evaluation = document.querySelector('.evaluation');
-let title, categories;
-
+const evaluation = document.querySelector('.evaluation');
 
 getJSON('data.json');
 
 async function getJSON(file) {
-    let myObject = await fetch(file);
+    const myObject = await fetch(file);
     try {
-        let myData = await myObject.text();
-        let get = JSON.parse(myData);
+        const myData = await myObject.text();
+        const get = JSON.parse(myData);
 
         for (const item of get) {
-            let results = document.createElement('div');
+            const results = document.createElement('div');
             evaluation.appendChild(results);
             results.innerHTML =
                 `<div class="evaluation-container">
-                         <img class="evaluation-container__img" src="${item.icon}" alt="${item.category}" />
-                         <div class="evaluation-container__title">${item.category}</div>
+                         <img class="evaluation-container__img" src="${item.icon}" alt=" " />
+                         <h3 class="evaluation-container__title">${item.category}</h3>
                          <div class="evaluation-container__value"><span class="score">${item.score}</span><span class="from"> / 100</span></div>
                 </div>`;
-            title = document.getElementsByClassName('evaluation-container__title');
-            categories = '';
+            const title = document.getElementsByClassName('evaluation-container__title');
+            let categories = '';
             for (let a = 0; a < title.length; a++) {
                 categories = title[a];
                 let evaluation_container = document.getElementsByClassName('evaluation-container')[a];
@@ -46,7 +44,7 @@ async function getJSON(file) {
                 }
             }
         }
-        let button = document.createElement('div');
+        const button = document.createElement('div');
         //button.classList.add('btn-container');
         evaluation.appendChild(button);
         button.innerHTML =
